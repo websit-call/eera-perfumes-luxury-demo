@@ -79,7 +79,7 @@ export default function QualityPage() {
 
       {/* Full width image banner */}
       <section className="relative h-[500px] w-full border-t border-white/5">
-         <Image src="https://picsum.photos/seed/kannauj_labs/1920/800" alt="Laboratory testing" fill className="object-cover opacity-30 mix-blend-luminosity" referrerPolicy="no-referrer" />
+         <Image src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1920&q=80" alt="Laboratory testing" fill className="object-cover opacity-30 mix-blend-luminosity" referrerPolicy="no-referrer" />
          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
             <h2 className="font-serif text-4xl text-white mb-6">Request our CoA</h2>

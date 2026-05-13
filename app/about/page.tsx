@@ -31,7 +31,7 @@ export default function AboutPage() {
              
              <div className="relative w-full h-full border border-white/5 overflow-hidden">
                <Image
-                 src="https://picsum.photos/seed/kannauj_distil/800/1200"
+                 src="https://images.unsplash.com/photo-1583445013765-46c20c4a6772?auto=format&fit=crop&w=800&q=80"
                  alt="Vintage Kannauj Distillation"
                  fill
                  className="object-cover opacity-60 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-80 transition-all duration-1000"

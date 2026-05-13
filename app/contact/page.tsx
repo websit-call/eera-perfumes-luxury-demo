@@ -4,6 +4,7 @@ export const metadata = {
 };
 
 import { MapPin, Phone, Instagram, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ContactPage() {
   return (
@@ -61,7 +62,11 @@ export default function ContactPage() {
           {/* Form Panel */}
           <div className="w-full lg:w-2/3 bg-[#0a0a0a] border border-white/5 p-12 lg:p-20 relative overflow-hidden">
             {/* Glow */}
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+            {/* Minimal Background */}
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none z-0">
+               <Image src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80" alt="Background Texture" fill className="object-cover" referrerPolicy="no-referrer" />
+            </div>
 
             <h3 className="font-serif text-[28px] text-white mb-12 relative z-10">Send a Message</h3>
             

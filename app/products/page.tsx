@@ -10,25 +10,25 @@ const CATEGORIES = [
   {
     title: 'European Imports',
     description: 'Niche and designer-inspired fragrance oils sourced directly from elite laboratories. Known for their complex top notes and sophisticated dry-downs.',
-    image: 'euro_oils3',
+    image: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80',
     details: ['100% Concentrated', 'Alcohol Free', 'Designer Profiles']
   },
   {
     title: 'Middle Eastern Attars',
     description: 'Deep, resonant blends of Cambodian Oud, Ambergris, and delicate Taif Rose. Formulated for remarkable sillage and cultural authenticity.',
-    image: 'oud_oud',
+    image: 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80',
     details: ['Pure Oud Integrations', 'Long-lasting Sillage', 'Rich Base Notes']
   },
   {
     title: 'Kannauj Masterpieces',
     description: 'The soul of our heritage. We still supply select traditional Shamama, Khus, and Mitti attars distilled using the ancient deg-bhapka method.',
-    image: 'kannauj_mud',
+    image: 'https://images.unsplash.com/photo-1583445013765-46c20c4a6772?auto=format&fit=crop&w=800&q=80',
     details: ['Traditional Distillation', 'Earth-based', 'Rare Heritage']
   },
   {
     title: 'Fixatives & Compounds',
     description: 'High-performance bases that anchor volatile top notes and ensure your final product lasts upwards of 12 hours on skin.',
-    image: 'chemistry_lab',
+    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80',
     details: ['Longevity Enhancers', 'Custom Bases', 'Purity Tested']
   }
 ];
@@ -55,7 +55,7 @@ export default function ProductsPage() {
             <div key={i} className="group relative bg-[#050505] overflow-hidden min-h-[500px] flex flex-col">
               <div className="absolute inset-0 h-[60%] w-full">
                 <Image
-                   src={`https://picsum.photos/seed/${cat.image}/800/600`}
+                   src={cat.image}
                    alt={cat.title}
                    fill
                    className="object-cover opacity-30 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-70 transition-all duration-1000"

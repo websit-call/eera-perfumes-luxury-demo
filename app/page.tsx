@@ -27,7 +27,7 @@ export default function Home() {
             className="absolute inset-0"
           >
             <Image
-              src="https://picsum.photos/seed/luxuryperfume9/1920/1080"
+              src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=80"
               alt="Luxury Perfume Cinematic"
               fill
               className="object-cover opacity-20 mix-blend-screen scale-105"
@@ -127,7 +127,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-[#D4AF37]/5 translate-x-4 -translate-y-4 rounded-sm"></div>
             <div className="relative w-full h-full border border-white/10 overflow-hidden">
               <Image
-                src="https://picsum.photos/seed/perfumery2/800/1000"
+                src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80"
                 alt="Perfume Creation"
                 fill
                 className="object-cover opacity-60 mix-blend-luminosity hover:mix-blend-normal hover:scale-105 transition-all duration-1000"
@@ -180,9 +180,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "European Imports", img: "european_oils", desc: "Fine designer-inspired fragrance oils." },
-              { title: "Middle Eastern", img: "oud_attar", desc: "Rich Oud, Amber, and Mukhallat blends." },
-              { title: "Fixatives & Compounds", img: "chemistry", desc: "Specialty bases for maximum longevity." }
+              { title: "European Imports", img: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80", desc: "Fine designer-inspired fragrance oils." },
+              { title: "Middle Eastern", img: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80", desc: "Rich Oud, Amber, and Mukhallat blends." },
+              { title: "Fixatives & Compounds", img: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80", desc: "Specialty bases for maximum longevity." }
             ].map((prod, i) => (
               <motion.div
                 key={i}
@@ -196,7 +196,7 @@ export default function Home() {
                   className="group block relative h-[450px] bg-black border border-white/5 overflow-hidden"
                 >
                   <Image
-                    src={`https://picsum.photos/seed/${prod.img}/600/800`}
+                    src={prod.img}
                     alt={prod.title}
                     fill
                     className="object-cover opacity-40 mix-blend-luminosity group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
@@ -259,10 +259,15 @@ export default function Home() {
             </p>
          </div>
          <div className="w-full md:w-2/3 grid grid-cols-2 lg:grid-cols-4">
-            {[1, 2, 3, 4].map((n) => (
+            {[
+              "1583445013765-46c20c4a6772",
+              "1594035910387-fea47794261f",
+              "1592945403244-b3fbafd7f539",
+              "1522337660859-02fbefca4702"
+            ].map((id, n) => (
               <a href="#" key={n} className="relative aspect-square md:aspect-auto h-full overflow-hidden group block">
                 <Image
-                  src={`https://picsum.photos/seed/eeraig${n}/400/400`}
+                  src={`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=400&q=80`}
                   alt="Instagram snippet"
                   fill
                   className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
