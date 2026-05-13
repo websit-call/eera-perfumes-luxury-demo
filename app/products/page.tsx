@@ -35,7 +35,7 @@ const CATEGORIES = [
 
 export default function ProductsPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-black overflow-hidden pt-28">
+    <div className="flex flex-col min-h-screen bg-black overflow-x-clip pt-28">
       
       {/* Header */}
       <section className="relative px-6 py-20 lg:py-24 text-center">
@@ -58,6 +58,7 @@ export default function ProductsPage() {
                    src={cat.image}
                    alt={cat.title}
                    fill
+                   sizes="(max-width: 768px) 100vw, 50vw"
                    className="object-cover opacity-30 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-70 transition-all duration-1000"
                    referrerPolicy="no-referrer"
                 />

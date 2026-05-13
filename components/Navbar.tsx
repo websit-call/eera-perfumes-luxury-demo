@@ -38,8 +38,8 @@ export default function Navbar() {
     >
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="group flex items-center gap-2">
-          <span className="font-serif text-[28px] tracking-[0.4em] uppercase text-white transition-colors duration-500 group-hover:text-[#D4AF37]">
+        <Link href="/" className="group flex items-center gap-2 mt-1 md:mt-0">
+          <span className="font-serif text-[28px] leading-[1] tracking-[0.4em] uppercase text-white transition-colors duration-500 group-hover:text-[#D4AF37] block pl-1">
             Eera
           </span>
           <div className="h-4 w-[1px] bg-[#D4AF37]/30 mx-2 hidden md:block"></div>
@@ -47,7 +47,7 @@ export default function Navbar() {
             Perfumes
           </span>
         </Link>
-
+        
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-10">
           {NAV_LINKS.map((link) => (
@@ -64,19 +64,21 @@ export default function Navbar() {
           ))}
         </nav>
         
-        <div className="hidden lg:flex items-center">
-            <Link href="/contact" className="px-6 py-2.5 bg-transparent border border-white/20 text-white text-[10px] tracking-[0.2em] uppercase font-bold hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-500">
-                Inquiries
-            </Link>
-        </div>
+        <div className="flex items-center gap-4">
+          <div className="hidden lg:flex items-center">
+              <Link href="/contact" className="px-6 py-2.5 bg-transparent border border-white/20 text-white text-[10px] tracking-[0.2em] uppercase font-bold hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-500">
+                  Inquiries
+              </Link>
+          </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-white/80 hover:text-white transition-colors"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
-        </button>
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden p-2 text-white/80 hover:text-white transition-colors flex items-center justify-center"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
@@ -84,11 +86,10 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <motion.nav
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: '100vh' }}
+            animate={{ opacity: 1, height: '100svh' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-full left-0 w-full bg-black/95 backdrop-blur-3xl flex flex-col items-center justify-center gap-8 md:hidden border-t border-white/5 overflow-hidden"
-            style={{ height: 'calc(100vh - 100%)' }}
+            className="fixed top-0 left-0 w-full bg-black/95 backdrop-blur-3xl flex flex-col items-center justify-center gap-8 md:hidden border-t border-white/5 overflow-hidden -z-10 pt-20"
           >
             {NAV_LINKS.map((link, i) => (
               <motion.div

@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-black overflow-hidden pt-28">
+    <div className="flex flex-col min-h-screen bg-black overflow-x-clip pt-28">
       {/* Header */}
       <section className="relative px-6 py-20 lg:py-24 text-center">
         <span className="font-sans text-[10px] tracking-[0.4em] text-[#D4AF37] font-semibold uppercase mb-6 block">Reach Out</span>
@@ -65,7 +65,7 @@ export default function ContactPage() {
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
             {/* Minimal Background */}
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none z-0">
-               <Image src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80" alt="Background Texture" fill className="object-cover" referrerPolicy="no-referrer" />
+               <Image src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80" alt="Background Texture" fill sizes="100vw" className="object-cover" referrerPolicy="no-referrer" />
             </div>
 
             <h3 className="font-serif text-[28px] text-white mb-12 relative z-10">Send a Message</h3>

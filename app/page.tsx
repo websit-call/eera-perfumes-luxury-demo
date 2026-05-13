@@ -17,7 +17,7 @@ export default function Home() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-black overflow-hidden" ref={containerRef}>
+    <div className="flex flex-col min-h-screen bg-black overflow-x-clip" ref={containerRef}>
       {/* 1. CINEMATIC HERO SECTION */}
       <section className="relative h-[100svh] flex justify-center items-center overflow-hidden">
         {/* Animated ambient light / smoke */}
@@ -26,14 +26,15 @@ export default function Home() {
             style={{ y: y1 }}
             className="absolute inset-0"
           >
-            <Image
-              src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=80"
-              alt="Luxury Perfume Cinematic"
-              fill
-              className="object-cover opacity-20 mix-blend-screen scale-105"
-              referrerPolicy="no-referrer"
-              priority
-            />
+                <Image
+                  src={`https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=80`}
+                  alt="Luxury Perfume Cinematic"
+                  fill
+                  sizes="100vw"
+                  className="object-cover opacity-20 mix-blend-screen scale-105"
+                  referrerPolicy="no-referrer"
+                  priority
+                />
           </motion.div>
           {/* Gradients to blend into black */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/80"></div>
@@ -115,7 +116,7 @@ export default function Home() {
       </section>
 
       {/* 3. SPLIT ABOUT SECTION */}
-      <section className="py-32 px-6">
+      <section className="pt-16 pb-32 px-6 lg:pt-24">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-stretch">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
@@ -125,11 +126,12 @@ export default function Home() {
             className="w-full lg:w-1/2 relative min-h-[500px]"
           >
             <div className="absolute inset-0 bg-[#D4AF37]/5 translate-x-4 -translate-y-4 rounded-sm"></div>
-            <div className="relative w-full h-full border border-white/10 overflow-hidden">
+            <div className="absolute inset-0 border border-white/10 overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80"
                 alt="Perfume Creation"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-60 mix-blend-luminosity hover:mix-blend-normal hover:scale-105 transition-all duration-1000"
                 referrerPolicy="no-referrer"
               />
@@ -199,6 +201,7 @@ export default function Home() {
                     src={prod.img}
                     alt={prod.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover opacity-40 mix-blend-luminosity group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
                     referrerPolicy="no-referrer"
                   />
@@ -270,6 +273,7 @@ export default function Home() {
                   src={src}
                   alt="Instagram snippet"
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                   referrerPolicy="no-referrer"
                 />

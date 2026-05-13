@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-black overflow-hidden pt-28">
+    <div className="flex flex-col min-h-screen bg-black overflow-x-clip pt-28">
       
       {/* HEADER TItle */}
       <section className="relative px-6 py-20 lg:py-32 flex justify-center items-center">
@@ -34,6 +34,7 @@ export default function AboutPage() {
                  src="https://images.unsplash.com/photo-1583445013765-46c20c4a6772?auto=format&fit=crop&w=800&q=80"
                  alt="Vintage Kannauj Distillation"
                  fill
+                 sizes="(max-width: 768px) 100vw, 50vw"
                  className="object-cover opacity-60 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-80 transition-all duration-1000"
                  referrerPolicy="no-referrer"
                />

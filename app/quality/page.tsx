@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function QualityPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-black overflow-hidden pt-28">
+    <div className="flex flex-col min-h-screen bg-black overflow-x-clip pt-28">
       
       {/* Header */}
       <section className="relative px-6 py-20 lg:py-32 flex justify-center items-center">
@@ -79,7 +79,7 @@ export default function QualityPage() {
 
       {/* Full width image banner */}
       <section className="relative h-[500px] w-full border-t border-white/5">
-         <Image src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1920&q=80" alt="Laboratory testing" fill className="object-cover opacity-30 mix-blend-luminosity" referrerPolicy="no-referrer" />
+         <Image src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1920&q=80" alt="Laboratory testing" fill sizes="100vw" className="object-cover opacity-30 mix-blend-luminosity" referrerPolicy="no-referrer" />
          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
             <h2 className="font-serif text-4xl text-white mb-6">Request our CoA</h2>
