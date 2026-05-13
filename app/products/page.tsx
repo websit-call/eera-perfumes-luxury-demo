@@ -22,7 +22,7 @@ const CATEGORIES = [
   {
     title: 'Kannauj Masterpieces',
     description: 'The soul of our heritage. We still supply select traditional Shamama, Khus, and Mitti attars distilled using the ancient deg-bhapka method.',
-    image: 'https://images.unsplash.com/photo-1583445013765-46c20c4a6772?auto=format&fit=crop&w=800&q=80',
+    image: '/kannauj.jpg',
     details: ['Traditional Distillation', 'Earth-based', 'Rare Heritage']
   },
   {

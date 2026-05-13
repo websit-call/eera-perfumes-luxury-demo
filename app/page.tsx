@@ -260,14 +260,14 @@ export default function Home() {
          </div>
          <div className="w-full md:w-2/3 grid grid-cols-2 lg:grid-cols-4">
             {[
-              "1583445013765-46c20c4a6772",
-              "1594035910387-fea47794261f",
-              "1592945403244-b3fbafd7f539",
-              "1522337660859-02fbefca4702"
-            ].map((id, n) => (
+              "/pouring.jpg",
+              "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=400&q=80",
+              "/flatlay.jpg"
+            ].map((src, n) => (
               <a href="#" key={n} className="relative aspect-square md:aspect-auto h-full overflow-hidden group block">
                 <Image
-                  src={`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=400&q=80`}
+                  src={src}
                   alt="Instagram snippet"
                   fill
                   className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
